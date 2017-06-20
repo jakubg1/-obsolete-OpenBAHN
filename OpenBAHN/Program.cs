@@ -10,7 +10,13 @@ namespace OpenBAHN
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        //lista obiektow klasy
+        static List<MojaKlasa> lista_mojaklasa = new List<MojaKlasa>();
+    
+
         [STAThread]
+
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -20,26 +26,30 @@ namespace OpenBAHN
         static void WriteToList(int x, int y, int id, bool haveParam, string param1, int param2, bool param3)
         {
             // *** Kod by Nitro modyfikacja i dostosowanie by jakubg1 ***
-            MojaKlasa tmk = new MojaKlasa();
 
             //nowy item
             //definiuje nowy obiekt MojaKlasa zanim dodam do listy obiektow 
-            tmk = new MojaKlasa();
-            tmk.x_kratki = x;
-            tmk.y_kratki = y;
-            tmk.id = id;
-            tmk.maParametry = haveParam;
+            MojaKlasa mk = new MojaKlasa();
+            mk.x_kratki = x;
+            mk.y_kratki = y;
+            mk.id = id;
+            mk.maParametry = haveParam;
             if (haveParam)
             {
-                tmk.parametry.parametr1 = param1;
-                tmk.parametry.parametr2 = param2;
-                tmk.parametry.parametr3 = param3;
+                mk.parametry.parametr1 = param1;
+                mk.parametry.parametr2 = param2;
+                mk.parametry.parametr3 = param3;
             }
             //dodaje obiekt do listy
-            mk.Add(tmk);
+            lista_mojaklasa.Add(mk);
+
+
         }
         static void ReadFromList(int itemNumber)
         {
+
+
+           
             /*//wyswietl
             for (int i = 0; i < mk.Count; i++)
             {
@@ -84,25 +94,12 @@ namespace OpenBAHN
         static List<MojaKlasa> mk = new List<MojaKlasa>();
         static void test()
         {
-            ReadFromList(1);
-            if (param1 != "")
+            ///niepotrzebna jezeli chcesz sie odwolac do konkretnej komorki w tablicy
+            //ReadFromList(1);
+            if (!String.IsNullOrEmpty(mk[1].parametry.parametr1))
             {
                 // some action
             }
         }
-    }
-    class KlasaID
-    {
-        public String parametr1 = "";
-        public int parametr2 = -1;
-        public bool parametr3 = false;
-    }
-    class MojaKlasa
-    {
-        public int x_kratki = -1;
-        public int y_kratki = -1;
-        public int id = -1;
-        public bool maParametry = false;
-        public KlasaID parametry = new KlasaID();
     }
 }
