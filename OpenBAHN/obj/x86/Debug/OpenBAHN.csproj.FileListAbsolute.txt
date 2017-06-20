@@ -1,0 +1,14 @@
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\bin\Debug\OpenBAHN.exe
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\bin\Debug\OpenBAHN.pdb
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\obj\x86\Debug\OpenBAHN.Layout.resources
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\obj\x86\Debug\OpenBAHN.Properties.Resources.resources
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\obj\x86\Debug\OpenBAHN.csproj.GenerateResource.Cache
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\obj\x86\Debug\OpenBAHN.exe
+C:\Users\beata\AppData\Local\Temporary Projects\OpenBAHN\obj\x86\Debug\OpenBAHN.pdb
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.exe
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.pdb
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\bin\Debug\OpenBAHN.exe
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\bin\Debug\OpenBAHN.pdb
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.Layout.resources
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.Properties.Resources.resources
+C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.csproj.GenerateResource.Cache

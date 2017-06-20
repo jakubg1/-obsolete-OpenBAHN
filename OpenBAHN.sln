@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBAHN", "OpenBAHN\OpenBAHN.csproj", "{ABD152FA-B308-4A5D-B2C6-041C885EFE7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD152FA-B308-4A5D-B2C6-041C885EFE7C}.Debug|x86.ActiveCfg = Debug|x86
+		{ABD152FA-B308-4A5D-B2C6-041C885EFE7C}.Debug|x86.Build.0 = Debug|x86
+		{ABD152FA-B308-4A5D-B2C6-041C885EFE7C}.Release|x86.ActiveCfg = Release|x86
+		{ABD152FA-B308-4A5D-B2C6-041C885EFE7C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
