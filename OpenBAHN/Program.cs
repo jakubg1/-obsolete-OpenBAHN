@@ -47,37 +47,6 @@ namespace OpenBAHN
         }
         static void ReadFromList(int itemNumber)
         {
-
-
-           
-            /*//wyswietl
-            for (int i = 0; i < mk.Count; i++)
-            {
-                Console.WriteLine("Item nr: " + i);
-                Console.WriteLine("Kratka [x,y]: [" + mk[i].x_kratki + "," + mk[i].y_kratki + "]");
-                Console.WriteLine("ID: " + mk[i].id.ToString());
-
-                //ponizej mozna pominac i walic if sprawdzajac czy ma wartosc inna od pustej
-                // if(mk[i].parametry.parametr1 != "")
-                // lub if(!String.IsNullOrEmpty(mk[i].parametry.parametr1)) bo sprawdzamy wartosc stringa
-                Console.WriteLine("Ma parametry?: " + mk[i].maParametry.ToString());
-
-                if (mk[i].maParametry)
-                {
-                    //Console.WriteLine("Ma parametry wiec je wyswietlmy");
-                    Console.WriteLine("parametr1: " + mk[i].parametry.parametr1);
-                    Console.WriteLine("parametr2: " + mk[i].parametry.parametr2);
-                    Console.WriteLine("parametr3: " + mk[i].parametry.parametr3);
-                }
-
-                Console.WriteLine("================");
-            }
-
-
-
-            Console.ReadKey();
-            */
-            //Console.WriteLine("Item nr: " + itemNumber);
             int x = mk[itemNumber].x_kratki;
             int y = mk[itemNumber].y_kratki;
             int id = mk[itemNumber].id;
