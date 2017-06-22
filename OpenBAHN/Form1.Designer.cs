@@ -35,8 +35,8 @@
             // Grid
             // 
             this.Grid.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.Grid.Image = global::OpenBAHN.Properties.Resources.id0;
-            this.Grid.Location = new System.Drawing.Point(0, 0);
+            this.Grid.Image = global::OpenBAHN.Properties.Resources.id1;
+            this.Grid.Location = new System.Drawing.Point(50, -8);
             this.Grid.Name = "Grid";
             this.Grid.Size = new System.Drawing.Size(40, 60);
             this.Grid.TabIndex = 0;

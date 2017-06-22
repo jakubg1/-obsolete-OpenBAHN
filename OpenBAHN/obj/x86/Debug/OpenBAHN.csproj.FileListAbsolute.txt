@@ -13,3 +13,11 @@ C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x8
 C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.Properties.Resources.resources
 C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.csproj.GenerateResource.Cache
 C:\Users\beata\Desktop\Gry i programy\Programy\OpenBAHN\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.csprojResolveAssemblyReference.cache
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\bin\Debug\OpenBAHN.exe
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\bin\Debug\OpenBAHN.pdb
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.csprojResolveAssemblyReference.cache
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.Layout.resources
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.Properties.Resources.resources
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.csproj.GenerateResource.Cache
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.exe
+C:\Users\Nitro\Desktop\OpenBAHN\OpenBAHN\obj\x86\Debug\OpenBAHN.pdb

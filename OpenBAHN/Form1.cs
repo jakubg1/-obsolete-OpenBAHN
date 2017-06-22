@@ -103,6 +103,7 @@ namespace OpenBAHN
             nGrid.Size = new Size(20, 60);
             nGrid.Name = "hahaha";
             nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
+            this.Controls.Add(nGrid);
         }
 
         private void DrawLayout(double OriginX, double OriginY)
@@ -117,6 +118,7 @@ namespace OpenBAHN
                     nGrid.Name = "Grid" + Convert.ToString(j) + "," + Convert.ToString(i);
                     nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
                     nGrid.Cursor = System.Windows.Forms.Cursors.Cross;
+                    this.Controls.Add(nGrid);
                 }
             }
         }
