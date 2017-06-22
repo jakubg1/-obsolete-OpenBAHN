@@ -41,6 +41,7 @@
             this.Grid.Size = new System.Drawing.Size(40, 60);
             this.Grid.TabIndex = 0;
             this.Grid.TabStop = false;
+            this.Grid.Click += new System.EventHandler(this.Grid_Click);
             // 
             // Layout
             // 
