@@ -93,6 +93,10 @@ namespace OpenBAHN
             //Grid.Image = global::OpenBAHN.Properties.Resources.("id" + Convert.ToString(costam));
             Grid.Image = global::OpenBAHN.Properties.Resources.id2;
             DrawLayout(OriginX, OriginY);
+
+            //var x = costam;
+            //var myImage = (Bitmap)Resources.ResourceManager.GetObject("id{x}"); // dzieki _l0stfake7 ale to jeszcze nie dziala
+            //Grid.Image = myImage;
             costam++;
         }
 
@@ -100,7 +104,7 @@ namespace OpenBAHN
         {
             PictureBox nGrid = new PictureBox();
             nGrid.Location = new System.Drawing.Point(200, 200);
-            nGrid.Size = new Size(20, 60);
+            nGrid.Size = new Size(40, 60);
             nGrid.Name = "hahaha";
             nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
             this.Controls.Add(nGrid);
@@ -114,7 +118,7 @@ namespace OpenBAHN
                 {
                     PictureBox nGrid = new PictureBox();
                     nGrid.Location = new System.Drawing.Point(200 + (j * 40), 200 + (i * 20));
-                    nGrid.Size = new Size(20, 60);
+                    nGrid.Size = new Size(40, 60);
                     nGrid.Name = "Grid" + Convert.ToString(j) + "," + Convert.ToString(i);
                     nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
                     nGrid.Cursor = System.Windows.Forms.Cursors.Cross;
