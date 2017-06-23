@@ -12,8 +12,19 @@ namespace OpenBAHN
     public partial class Layout : Form
     {
         // Deklaracje ważnych zmiennych !!!
+        // Lista wszystkich ID kratek
+        static List<MojaKlasa> IndexList = new List<MojaKlasa>();
+        // Aktualne współrzędne górnego lewego rogu planszy
         double OriginX = 32767;
         double OriginY = 32767;
+        // Zmienne czytania z danego ID do wykorzystania później
+        int readx;
+        int ready;
+        int readid;
+        bool readhaveParam;
+        string readparam1;
+        int readparam2;
+        bool readparam3;
 
         //lista obiektow klasy
         static List<MojaKlasa> lista_mojaklasa = new List<MojaKlasa>();
@@ -30,46 +41,44 @@ namespace OpenBAHN
 
             //nowy item
             //definiuje nowy obiekt MojaKlasa zanim dodam do listy obiektow 
-            MojaKlasa mk = new MojaKlasa();
-            mk.x_kratki = x;
-            mk.y_kratki = y;
-            mk.id = id;
-            mk.maParametry = haveParam;
+            MojaKlasa IndexList = new MojaKlasa();
+            IndexList.x_kratki = x;
+            IndexList.y_kratki = y;
+            IndexList.id = id;
+            IndexList.maParametry = haveParam;
             if (haveParam)
             {
-                mk.parametry.parametr1 = param1;
-                mk.parametry.parametr2 = param2;
-                mk.parametry.parametr3 = param3;
+                IndexList.parametry.parametr1 = param1;
+                IndexList.parametry.parametr2 = param2;
+                IndexList.parametry.parametr3 = param3;
             }
             //dodaje obiekt do listy
-            lista_mojaklasa.Add(mk);
+            lista_mojaklasa.Add(IndexList);
 
 
         }
 
         static void ReadFromList(int itemNumber)
         {
-            int x = mk[itemNumber].x_kratki;
-            int y = mk[itemNumber].y_kratki;
-            int id = mk[itemNumber].id;
-            bool haveParam = mk[itemNumber].maParametry;
+            int readx = IndexList[itemNumber].x_kratki;
+            int ready = IndexList[itemNumber].y_kratki;
+            int readid = IndexList[itemNumber].id;
+            bool readhaveParam = IndexList[itemNumber].maParametry;
 
-            if (mk[itemNumber].maParametry)
+            if (IndexList[itemNumber].maParametry)
             {
-                string param1 = mk[itemNumber].parametry.parametr1;
-                int param2 = mk[itemNumber].parametry.parametr2;
-                bool param3 = mk[itemNumber].parametry.parametr3;
+                string readparam1 = IndexList[itemNumber].parametry.parametr1;
+                int readparam2 = IndexList[itemNumber].parametry.parametr2;
+                bool readparam3 = IndexList[itemNumber].parametry.parametr3;
             }
             // *** Koniec kodu by Nitro ***
         }
-
-        static List<MojaKlasa> mk = new List<MojaKlasa>();
 
         static void test()
         {
             ///niepotrzebna jezeli chcesz sie odwolac do konkretnej komorki w tablicy
             //ReadFromList(1);
-            if (!String.IsNullOrEmpty(mk[1].parametry.parametr1))
+            if (!String.IsNullOrEmpty(IndexList[1].parametry.parametr1))
             {
                 // some action
             }
@@ -112,15 +121,47 @@ namespace OpenBAHN
 
         private void DrawLayout(double OriginX, double OriginY)
         {
+            WriteToList(32767, 32767, 1, false, "", 0, false);
+            WriteToList(32768, 32767, 1, false, "", 0, false);
+            WriteToList(32769, 32767, 2, false, "", 0, false);
+            WriteToList(32769, 32768, 2, false, "", 0, false);
+            WriteToList(32770, 32768, 3, false, "", 0, false);
+            WriteToList(32771, 32767, 3, false, "", 0, false);
+            // kod kasowania dotychczasowej planszy
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
                 {
+
+                    double targetX = OriginX + j;
+                    double targetY = OriginY + i;
+                    int gotID = 0; // musimy to tutaj zdeklarowac bo inaczej przy pustej kratce bedzie wysyp
+                    for (int k = 0; k < IndexList.Count; k++) // sprawdzamy dla kazdego wpisu
+                    {
+                        ReadFromList(k);
+                        if (readx == targetX && ready == targetY)
+                        {
+                            gotID = readid;
+                            break; // bo po co sprawdzac dalej
+                        }
+                    }
                     PictureBox nGrid = new PictureBox();
-                    nGrid.Location = new System.Drawing.Point(200 + (j * 40), 200 + (i * 20));
+                    nGrid.Location = new System.Drawing.Point(80 + (j * 40), -20 + (i * 20));
                     nGrid.Size = new Size(40, 60);
                     nGrid.Name = "Grid" + Convert.ToString(j) + "," + Convert.ToString(i);
-                    nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
+                    //nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
+                    if (gotID == 1)
+                    {
+                        nGrid.Image = global::OpenBAHN.Properties.Resources.id1;
+                    }
+                    if (gotID == 2)
+                    {
+                        nGrid.Image = global::OpenBAHN.Properties.Resources.id2;
+                    }
+                    if (gotID == 3)
+                    {
+                        nGrid.Image = global::OpenBAHN.Properties.Resources.id3;
+                    }
                     nGrid.Cursor = System.Windows.Forms.Cursors.Cross;
                     this.Controls.Add(nGrid);
                 }
