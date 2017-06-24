@@ -6,14 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using OpenBAHN.Properties;
 
 namespace OpenBAHN
 {
     public partial class Layout : Form
     {
         // Deklaracje ważnych zmiennych !!!
+        // Jednorazowy bool służący do stworzenia planszy - w celu całkowitego odświeżenia zmienić na false w kodzie niżej
+        bool Generated = false;
         // Lista wszystkich ID kratek
-        static List<MojaKlasa> IndexList = new List<MojaKlasa>();
+        static List<MojaKlasa> IndexListTemp = new List<MojaKlasa>();
         // Aktualne współrzędne górnego lewego rogu planszy
         double OriginX = 32767;
         double OriginY = 32767;
@@ -27,7 +30,7 @@ namespace OpenBAHN
         bool readparam3;
 
         //lista obiektow klasy
-        static List<MojaKlasa> lista_mojaklasa = new List<MojaKlasa>();
+        static List<MojaKlasa> IndexList = new List<MojaKlasa>();
         int costam = 0;
 
         public Layout()
@@ -41,19 +44,19 @@ namespace OpenBAHN
 
             //nowy item
             //definiuje nowy obiekt MojaKlasa zanim dodam do listy obiektow 
-            MojaKlasa IndexList = new MojaKlasa();
-            IndexList.x_kratki = x;
-            IndexList.y_kratki = y;
-            IndexList.id = id;
-            IndexList.maParametry = haveParam;
+            MojaKlasa IndexListTemp = new MojaKlasa();
+            IndexListTemp.x_kratki = x;
+            IndexListTemp.y_kratki = y;
+            IndexListTemp.id = id;
+            IndexListTemp.maParametry = haveParam;
             if (haveParam)
             {
-                IndexList.parametry.parametr1 = param1;
-                IndexList.parametry.parametr2 = param2;
-                IndexList.parametry.parametr3 = param3;
+                IndexListTemp.parametry.parametr1 = param1;
+                IndexListTemp.parametry.parametr2 = param2;
+                IndexListTemp.parametry.parametr3 = param3;
             }
             //dodaje obiekt do listy
-            lista_mojaklasa.Add(IndexList);
+            IndexList.Add(IndexListTemp);
 
 
         }
@@ -103,9 +106,9 @@ namespace OpenBAHN
             Grid.Image = global::OpenBAHN.Properties.Resources.id2;
             DrawLayout(OriginX, OriginY);
 
-            //var x = costam;
-            //var myImage = (Bitmap)Resources.ResourceManager.GetObject("id{x}"); // dzieki _l0stfake7 ale to jeszcze nie dziala
-            //Grid.Image = myImage;
+            var x = costam;
+            var myImage = (Bitmap)Resources.ResourceManager.GetObject("id{x}");
+            Grid.Image = myImage;
             costam++;
         }
 
@@ -127,14 +130,12 @@ namespace OpenBAHN
             WriteToList(32769, 32768, 2, false, "", 0, false);
             WriteToList(32770, 32768, 3, false, "", 0, false);
             WriteToList(32771, 32767, 3, false, "", 0, false);
-            // kod kasowania dotychczasowej planszy
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
                 {
-
-                    double targetX = OriginX + j;
-                    double targetY = OriginY + i;
+                    double targetX = /*OriginX +*/ j;
+                    double targetY = /*OriginY +*/ i;
                     int gotID = 0; // musimy to tutaj zdeklarowac bo inaczej przy pustej kratce bedzie wysyp
                     for (int k = 0; k < IndexList.Count; k++) // sprawdzamy dla kazdego wpisu
                     {
