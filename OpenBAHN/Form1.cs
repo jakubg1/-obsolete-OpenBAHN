@@ -134,8 +134,8 @@ namespace OpenBAHN
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    double targetX = /*OriginX +*/ j;
-                    double targetY = /*OriginY +*/ i;
+                    double targetX = OriginX + j;
+                    double targetY = OriginY + i;
                     int gotID = 0; // musimy to tutaj zdeklarowac bo inaczej przy pustej kratce bedzie wysyp
                     for (int k = 0; k < IndexList.Count; k++) // sprawdzamy dla kazdego wpisu
                     {
@@ -159,11 +159,12 @@ namespace OpenBAHN
                     {
                         nGrid.Image = global::OpenBAHN.Properties.Resources.id2;
                     }
-                    if (gotID == 3)
-                    {
+                    //if (gotID == 3)
+                    //{
                         nGrid.Image = global::OpenBAHN.Properties.Resources.id3;
-                    }
+                    //}
                     nGrid.Cursor = System.Windows.Forms.Cursors.Cross;
+                    nGrid.BackColor = Color.Transparent;
                     this.Controls.Add(nGrid);
                 }
             }
