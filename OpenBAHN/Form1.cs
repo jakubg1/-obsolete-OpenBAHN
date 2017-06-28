@@ -159,10 +159,10 @@ namespace OpenBAHN
                     {
                         nGrid.Image = global::OpenBAHN.Properties.Resources.id2;
                     }
-                    //if (gotID == 3)
-                    //{
+                    if (gotID == 3)
+                    {
                         nGrid.Image = global::OpenBAHN.Properties.Resources.id3;
-                    //}
+                    }
                     nGrid.Cursor = System.Windows.Forms.Cursors.Cross;
                     nGrid.BackColor = Color.Transparent;
                     this.Controls.Add(nGrid);
