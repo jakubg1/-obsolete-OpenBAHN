@@ -1,6 +1,8 @@
 # OpenBAHN
 An open-source project based on JBSS' simulation software.
 
+OBSOLETE!!! Please check OpenBAHN2 >>> [link]
+
 !!EN!!
 
 Currently this project is in VERY EARLY development stage and needs to be expanded. To-do list:
