@@ -1,7 +1,7 @@
 # OpenBAHN
 An open-source project based on JBSS' simulation software.
 
-OBSOLETE!!! Please check OpenBAHN2 >>> [link]
+OBSOLETE!!! Please check OpenBAHN2 >>> https://github.com/jakubg1/OpenBAHN2
 
 !!EN!!
 
